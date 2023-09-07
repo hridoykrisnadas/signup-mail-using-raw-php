@@ -42,11 +42,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title>Sign Up!</title>
+    <link rel="icon" type="image/x-icon" href="images/fav.png">
   </head>
   <body>
     <div class = "bg-warning p-3">
@@ -83,7 +85,7 @@
             </div>
             <div class="col-md-4 mb-3">
               <label for="mobile_no" class="form-label">Mobile No</label>
-              <input type="text" name="mobile_no" class="form-control" id="mobile_no" Required placeholder="Enter your Mobile No">
+              <input type="text" name="mobile_no" class="form-control" id="mobile_no" maxlength="11" Required placeholder="Enter your Mobile No">
             </div>
             <div class="col-md-6 mb-3">
               <label for="username" class="form-label">Username</label>
