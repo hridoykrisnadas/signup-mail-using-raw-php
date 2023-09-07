@@ -33,7 +33,7 @@
     <link rel="icon" type="image/x-icon" href="images/fav.png">
   </head>
   <body>
-    <div class="bg-warning p-3">
+    <div class="bg-warning bg-gradient p-3 vh-100">
       <?php
         if($success == 1){
           foreach($result as $row){
@@ -45,16 +45,16 @@
         } else if($success == -1){
           echo '
           <div>  
-          <h1 class="text-center bg-warning pt-3 pb-3">Wrong Credentials, Please enter valid username & password.</h1>
+          <h1 class="text-center bg-danger pt-3 pb-3">Wrong Credentials, Please enter valid username & password.</h1>
           </div>
             ';
         }
       ?>
       
-      <div class = "container">
-        <h1 class= "text-center">Log In Page</h1>
+      <div class = "container m-5 px-5">
+        <img src="images/login.png" alt="Sign Up" class="rounded mx-auto d-block"></>
         <form action="login.php" method="POST">
-          <div class="row p-3">
+          <div class="row px-5 mx-5">
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
                 <input type="text" name="username" class="form-control" id="username" required placeholder="Enter your Username">
@@ -66,7 +66,7 @@
             <button type="submit" class="btn btn-dark p-2">Submit</button>
           </div>
         </form>
-        <h6 class="text-center fw-bold">Haven't any account! Please <a href="signup.php" class="text-dark">Signup Now..</a></h6>
+        <h6 class="text-center mt-2 fw-bold">Haven't any account! Please <a href="signup.php" class="text-dark">Signup Now..</a></h6>
       </div>
     </div>
   </body>

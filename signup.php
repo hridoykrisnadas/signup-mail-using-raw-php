@@ -51,7 +51,7 @@
     <link rel="icon" type="image/x-icon" href="images/fav.png">
   </head>
   <body>
-    <div class = "bg-warning p-3">
+    <div class = "bg-warning bg-gradient p-3 vh-100">
       <?php
         if($user){
           echo '
@@ -63,10 +63,10 @@
         }
       ?>
       
-      <div class = "container">
+      <div class = "container m-3 p-3">
         <img src="images/signup.png" alt="Sign Up" class="rounded mx-auto d-block"></>
         <form action="signup.php" method="POST">
-          <div class = "row p-3">
+          <div class = "row px-5 mx-5">
             <div class="col-md-6 mb-3">
               <label for="name" class="form-label">Name</label>
               <input type="text" name="name" class="form-control" id="name" Required placeholder="Enter your Name">
@@ -98,7 +98,7 @@
             <button type="submit" class="btn btn-dark p-2">Submit</button>
           </div>
         </form>
-        <h6 class="text-center fw-bold">Already have account! Please <a href="login.php" class="text-dark">Login Now..</a></h6>
+        <h6 class="text-center mt-2 fw-bold">Already have account! Please <a href="login.php" class="text-dark">Login Now..</a></h6>
       </div>
     </div>
   </body>
