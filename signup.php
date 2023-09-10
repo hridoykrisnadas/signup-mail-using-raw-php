@@ -63,7 +63,7 @@
         }
       ?>
       
-      <div class = "container m-3 p-3">
+      <div class = "container p-3">
         <img src="images/signup.png" alt="Sign Up" class="rounded mx-auto d-block"></>
         <form action="signup.php" method="POST">
           <div class = "row px-5 mx-5">

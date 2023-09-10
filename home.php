@@ -24,7 +24,8 @@
     <link rel="icon" type="image/x-icon" href="images/fav.png">
 </head>
 <body>
-  <div class = "bg-dark bg-gradient text-white p-2 vh-100">
+  <div class = "bg-dark bg-gradient text-white p-2">
+  <!-- vh-100 -->
     <?php
       foreach($result as $row){
         $name = $row['name'];
@@ -36,7 +37,8 @@
     ?>
 
     <h1 class="text-center fw-bold text-warning p-2">Welcome Mr. <?php echo strtoupper($name)?></h1>
-    <div class="position-absolute top-50 start-50 translate-middle">
+    <div class="">
+    <!-- position-absolute top-50 start-50 translate-middle -->
       <h3 class="fw-bold text-warning text-center p-2">Your Information is here: </h3>
       <div class="p-2 text-center ">
         <h5>Full Name: <?php echo $name?></h5>
@@ -46,8 +48,42 @@
         <h5>Mobile No: <?php echo $mobile_no?></h5>
         <a href="https://wa.me/+88<?php echo $mobile_no?>"><img src="images/whatsapp.webp" width="50px" height = "50px"></img></a>
       </div>  
+      <div class="container p-5">
+        <form action="send.php" class="row g-3 px-5" method="post" enctype="multipart/form-data">
+          <div class="col-md-6 mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" id="name" Required placeholder="Enter your Name">
+          </div>
+          <div class="col-md-6">
+            <label for="mobile" class="form-label">Mobile No</label>
+            <input type="text" name="mobile_no" required placeholder="Enter Mobile No" class="form-control" id="mobile">
+          </div>
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" name="email" required placeholder="Enter Email" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" name="subject" class="form-control" id="subject" Required placeholder="Enter Subject">
+          </div>
+          <div class="col-md-12 mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea type="text" name="message" class="form-control" id="message" Required placeholder="Enter Message"></textarea>
+          </div>
+          <div class="col-md-12 mb-3">
+            <label for="file" class="form-label">File</label>
+            <input type="file" accept = ".pdf" name="resume" class="form-control" id="message" Required placeholder="Enter Message"></input>
+          </div>
+          <div class="col-12">
+            <button type="submit" name="send" class="btn btn-warning">Submit</button>
+          </div>
+        </form>
+      </div>
     </div>
-    <button type="button" class="btn btn-warning text-center rounded mx-auto d-block m-2 position-absolute bottom-0 start-50 translate-middle-x"><a href="logout.php" class="fw-bold text-decoration-none text-dark">Log Out</a></button>
+    
+
+    <button type="button" class="btn btn-warning text-center rounded mx-auto d-block m-2 "><a href="logout.php" class="fw-bold text-decoration-none text-dark">Log Out</a></button>
+    <!-- position-absolute bottom-0 start-50 translate-middle-x -->
   </div>
 </body>
 </html>

@@ -51,7 +51,7 @@
         }
       ?>
       
-      <div class = "container m-5 px-5">
+      <div class = "container px-5">
         <img src="images/login.png" alt="Sign Up" class="rounded mx-auto d-block"></>
         <form action="login.php" method="POST">
           <div class="row px-5 mx-5">
