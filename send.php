@@ -20,13 +20,13 @@
         $mail = new PHPMailer(true);
 
         $mail->isSMTP();
-        $mail->Host = 'a2plcpnl0072.prod.iad2.secureserver.net';
+        $mail->Host = ' ';
         $mail->SMTPAuth = true;
-        $mail->Username = 'krisna@gallacticit.com';
-        $mail->Password = 'S9QGH@BVaPp6';
+        $mail->Username = ' ';
+        $mail->Password = ' ';
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
-        $mail->setFrom('krisna@gallacticit.com', 'Krisna');
+        $mail->setFrom(' ', 'Krisna');
 
         $mail->addAddress($email);
         $mail->isHTML(true);
